@@ -20,6 +20,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Prepare web folder
+        run: |
+          mkdir -p www
+          cp index.html manifest.json sw.js icon-192.png icon-512.png www/
+
       - name: Install packages
         run: npm install
 
